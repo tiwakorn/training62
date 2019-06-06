@@ -1,3 +1,75 @@
-<p>
-  bmi works!
-</p>
+<div class="container">
+  <div class="row">  
+    <div class="col-3">
+      สถาบัน:
+    </div>
+    <div class="col-9">
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="opt" value="mfu" [(ngModel)]="school">MFU
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="opt" value="crru" [(ngModel)]="school">CRRU
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-3">
+      รหัสนักศึกษา:
+    </div>
+    <div class="col-9">
+      <input type="text" class="form-control" [(ngModel)]="studenId">
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-3">
+      ชื่อ:
+    </div>
+    <div class="col-9">
+      <input type="text" class="form-control" [(ngModel)]="firstname">
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-3">
+      นามสกุล:
+    </div>
+    <div class="col-9">
+      <input type="text" class="form-control" [(ngModel)]="lastname">
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-3">
+      อายุ:
+    </div>
+    <div class="col-9">
+      <input type="number" class="form-control" min="0" [(ngModel)]="age">
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-3">
+      น้ำหนัก:
+    </div>
+    <div class="col-9">
+      <input type="number" class="form-control" min="0" [(ngModel)]="weight">
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-3">
+      ส่วนสูง:
+    </div>
+    <div class="col-9">
+      <input type="number" class="form-control" min="0" [(ngModel)]="height">
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-6">
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">บันทึก</button>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-secondary" (click)="doSearchAll()">ดูรายการที่บันทึก</button>
+    </div>
+  </div>
+</div>  
