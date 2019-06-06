@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
       สถาบัน:
     </div>
@@ -16,7 +16,7 @@
       </div>
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
       รหัสนักศึกษา:
     </div>
@@ -24,7 +24,7 @@
       <input type="text" class="form-control" [(ngModel)]="studenId">
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
       ชื่อ:
     </div>
@@ -32,7 +32,7 @@
       <input type="text" class="form-control" [(ngModel)]="firstname">
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
       นามสกุล:
     </div>
@@ -40,36 +40,36 @@
       <input type="text" class="form-control" [(ngModel)]="lastname">
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
-      อายุ:
+      อายุ (ปี):
     </div>
     <div class="col-9">
       <input type="number" class="form-control" min="0" [(ngModel)]="age">
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
-      น้ำหนัก:
+      น้ำหนัก (กิโลกรัม):
     </div>
     <div class="col-9">
       <input type="number" class="form-control" min="0" [(ngModel)]="weight">
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-3">
-      ส่วนสูง:
+      ส่วนสูง (เมตร):
     </div>
     <div class="col-9">
       <input type="number" class="form-control" min="0" [(ngModel)]="height">
     </div>
   </div>
-  <div class="row">  
+  <div class="row pt-3 pb-3">  
     <div class="col-6">
-      <button type="button" class="btn btn-primary" (click)="onSubmit()">บันทึก</button>
+      <button type="button" class="btn btn-primary btn-block" (click)="onSubmit()">บันทึก</button>
     </div>
     <div class="col-6">
-      <button type="button" class="btn btn-secondary" (click)="doSearchAll()">ดูรายการที่บันทึก</button>
+      <button type="button" class="btn btn-success btn-block" (click)="doSearchAll()">ดูรายการที่บันทึก</button>
     </div>
   </div>
 </div>  

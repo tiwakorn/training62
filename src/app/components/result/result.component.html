@@ -1,22 +1,24 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">รหัสนักศึกษา</th>
-      <th scope="col">ชื่อ</th>
-      <th scope="col">นามสกุล</th>
-      <th scope="col">อายุ</th>
-      <th scope="col">น้ำหนัก</th>
-      <th scope="col">ส่วนสูง</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of displayData">
-      <td>{{item.studentId}}</td>
-      <td>{{item.firstname}}</td>
-      <td>{{item.lastname}}</td>
-      <td>{{item.age}}</td>
-      <td>{{item.weight}}</td>
-      <td>{{item.height}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">รหัสนักศึกษา</th>
+        <th scope="col">ชื่อ-นามสกุล</th>
+        <th scope="col">อายุ</th>
+        <th scope="col">น้ำหนัก</th>
+        <th scope="col">ส่วนสูง</th>
+        <th scope="col">BMI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of displayData">
+        <td>{{item.studentId}}</td>
+        <td>{{item.firstname}} {{item.lastname}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.weight}}</td>
+        <td>{{item.height}}</td>
+        <td [ngStyle]="{color: 'red'}">{{item.weight / (item.height * item.height) | number}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

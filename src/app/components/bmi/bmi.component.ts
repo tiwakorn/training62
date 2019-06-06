@@ -14,17 +14,19 @@ export class BmiComponent implements OnInit {
   firstname: string;
   lastname: string;
   age: number;
-  weight: string;
-  height: string;
+  weight: number;
+  height: number;
 
   constructor(private bmiService: BmiService, private router: Router) {
     this.school = "mfu";
   }
 
   ngOnInit() {
+    // this.resetData();
   }
 
   async onSubmit(){
+    var temp = this.weight / (this.height * this.height);
     let bmi = {
       studentId: this.studenId,
       firstname: this.firstname,
@@ -33,6 +35,8 @@ export class BmiComponent implements OnInit {
       weight: this.weight,
       height: this.height
     }
+
+    // console.log(bmi);
 
     await this.bmiService.addNewBmi(bmi).subscribe(
       data => {
@@ -43,6 +47,16 @@ export class BmiComponent implements OnInit {
 
   doSearchAll(){
     this.router.navigate(['/result']);
+  }
+
+  resetData(){
+    this.school = "mfu";
+    this.studenId = null;
+    this.firstname = null;
+    this.lastname = null;
+    this.age = null;
+    this.weight = null;
+    this.height = null;
   }
 
 }
